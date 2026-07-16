@@ -1,68 +1,92 @@
 <div align="center">
-  <h1>🌟 DSS MABAC</h1>
-  <p><strong>A Professional Decision Support System utilizing the MABAC Method</strong></p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/PNTL_logo.png/120px-PNTL_logo.png" alt="PNTL Logo" width="100"/>
+
+  # PNTL Infrastructure & Management System
+
+  **A modern Geographic Information System (GIS) and Management Dashboard for Polísia Nasionál Timor-Leste.**
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+  [![UI: Responsive](https://img.shields.io/badge/UI-Responsive-success)](#)
+  [![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen)](#)
 </div>
 
-## 📖 Overview
+<hr>
 
-**DSS MABAC** is a robust, custom-built Decision Support System developed to solve complex multi-criteria decision-making problems. By employing the **Multi-Attributive Border Approximation area Comparison (MABAC)** method, this application provides accurate, data-driven insights to facilitate optimal decision-making processes.
+## 📖 Deskripsi Proyek (Project Description)
 
-Built on a lightweight, custom MVC (Model-View-Controller) PHP framework, the application ensures high performance, maintainability, and scalability.
+Aplikasi Web ini dibangun untuk **Polísia Nasionál Timor-Leste (PNTL)** guna memetakan, mengelola, dan memantau infrastruktur serta fasilitas kepolisian di seluruh wilayah. Dilengkapi dengan peta interaktif, asisten *chatbot* cerdas, dan *dashboard* admin yang komprehensif, sistem ini mempermudah pencarian informasi dan manajemen data secara *real-time*.
 
-## ✨ Key Features
+## ✨ Fitur Utama (Key Features)
 
-- **Advanced Decision Logic:** Fully implements the MABAC algorithm for precise multi-criteria evaluation.
-- **Custom MVC Architecture:** Clean separation of concerns with bespoke routing, controllers, models, and views.
-- **Secure Authentication:** Integrated session-based user authentication and access control.
-- **Dynamic Scaffolding:** Includes automated Python scripts for rapid code generation (Controllers, UI, REST APIs, and Core modules).
-- **Responsive UI:** A modern, intuitive backend interface designed for seamless user experience.
+*   🗺️ **Peta Interaktif (Interactive Maps):** Visualisasi lokasi gedung PNTL, pos polisi, dan infrastruktur lainnya lengkap dengan detail lokasi dan rute.
+*   🤖 **Asisten Chatbot Pintar:** Terintegrasi langsung untuk membantu masyarakat mendapatkan informasi seputar fasilitas PNTL dengan cepat.
+*   📊 **Dashboard Admin Modern:** Panel kontrol aman untuk mengelola data gedung, munisipio (kabupaten), posko, dan kategori fasilitas.
+*   📈 **Statistik & Analitik Visual:** Menyajikan data statistik administratif dalam bentuk grafik batang dan diagram lingkaran yang responsif.
+*   📱 **Desain Responsif:** Tampilan modern dan profesional yang menyesuaikan dengan sempurna di berbagai perangkat (Desktop, Tablet, dan Mobile).
+*   ✉️ **Sistem Pesan & Notifikasi:** Integrasi SMTP Email untuk komunikasi internal.
 
-## 📸 Screenshots
+## 💻 Tampilan Aplikasi (Screenshots)
 
-### Backend Dashboard
-![Backend Interface](./image.png)
+*(Ganti URL gambar di bawah ini dengan gambar aplikasi Anda yang sudah di-upload ke folder `docs/` atau image hosting)*
 
-## 🚀 Tech Stack
+### Peta Interaktif & Chatbot
+![Peta & Chatbot](https://via.placeholder.com/800x400.png?text=Screenshot+Peta+dan+Chatbot)
 
-- **Backend:** PHP (Native MVC)
-- **Database:** MySQL / MariaDB
-- **Automation/Scaffolding:** Python
-- **Server Environment:** Apache / Nginx (XAMPP/MAMP compatible)
+### Dashboard Admin
+![Dashboard Admin](https://via.placeholder.com/800x400.png?text=Screenshot+Dashboard+Admin)
 
-## ⚙️ Installation & Setup
+## 🚀 Teknologi yang Digunakan (Tech Stack)
 
-Follow these steps to deploy the application locally:
+*   **Frontend:** HTML5, CSS3 (Bootstrap/Tailwind), JavaScript
+*   **Backend:** PHP / Node.js *(Sesuaikan dengan framework yang Anda gunakan, misal Laravel)*
+*   **Database:** MySQL / PostgreSQL
+*   **Lainnya:** Leaflet.js / Google Maps API (untuk peta), Chart.js (untuk grafik)
 
-1. **Clone the Repository**
+## 🛠️ Cara Instalasi (Installation Setup)
+
+Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di mesin lokal Anda:
+
+1. **Clone Repository ini:**
    ```bash
-   git clone https://github.com/yourusername/app-dss.git
-   cd app-dss
+   git clone https://github.com/username-anda/pntl-app.git
+   cd pntl-app
    ```
 
-2. **Database Configuration**
-   - Create a new MySQL database named `dss_mabac_db`.
-   - Import the provided SQL dump file: `dss_mabac_db.sql`.
+2. **Install Dependensi:**
+   ```bash
+   # Jika menggunakan Composer (PHP/Laravel)
+   composer install
 
-3. **Environment Setup**
-   - Open `config/app.php`.
-   - Update the database credentials to match your local environment:
-     ```php
-     define('APP_URL', 'http://localhost/app-dss');
-     define('DB_HOST', 'localhost');
-     define('DB_USER', 'root');
-     define('DB_PASS', '');
-     define('DB_NAME', 'dss_mabac_db');
-     ```
+   # Jika menggunakan NPM (Node.js)
+   npm install
+   ```
 
-4. **Run the Application**
-   - Move the project folder to your local server directory (e.g., `htdocs` for XAMPP).
-   - Access the application via your web browser: `http://localhost/app-dss/public`
+3. **Konfigurasi Environment:**
+   Salin file `.env.example` menjadi `.env` dan sesuaikan koneksi database Anda.
+   ```bash
+   cp .env.example .env
+   ```
 
-## 🛡️ License
+4. **Migrasi Database:**
+   ```bash
+   php artisan migrate
+   ```
 
-This project is open-source and available under the [MIT License](LICENSE).
+5. **Jalankan Aplikasi:**
+   ```bash
+   php artisan serve
+   ```
+   Aplikasi akan berjalan di `http://localhost:8000` atau `http://localhost/pntl-app/`
+
+## 👥 Kontributor (Contributors)
+
+*   **[Nama Anda]** - *Fullstack Developer* - [@username-anda](https://github.com/username-anda)
+
+## 📄 Lisensi (License)
+
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 
 ---
 <div align="center">
-  <i>Developed with precision and excellence.</i>
+  Dibuat dengan ❤️ untuk Timor-Leste.
 </div>
